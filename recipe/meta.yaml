@@ -1,18 +1,18 @@
 {% set name = "cesium" %}
-{% set version = "0.9.9" %}
+{% set version = "0.10.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "7cbde6817c00e1f0c3e51aaf860cf7784dfc58766f2d4e68a6ca613be10d3d81"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 080c1f595c8291fa78b2957934bb41b1c247c47be1195206c320e10e1eeb6ce1
 
 build:
   number: 0
-  skip: True  # [win]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  skip: true  # [win]
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   build:
@@ -40,13 +40,13 @@ test:
     - cesium.features
 
 about:
-  home: "http://cesium-ml.org/"
-  license: "BSD 3-Clause"
-  license_family: "BSD"
-  license_file: "LICENSE.txt"
-  summary: "Machine Learning Time-Series Platform"
-  doc_url: "http://cesium-ml.org/docs/"
-  dev_url: "https://github.com/cesium-ml/cesium"
+  home: http://cesium-ml.org/
+  license: BSD 3-Clause
+  license_family: BSD
+  license_file: LICENSE.txt
+  summary: Machine Learning Time-Series Platform
+  doc_url: http://cesium-ml.org/docs/
+  dev_url: https://github.com/cesium-ml/cesium
 
 extra:
   recipe-maintainers:
