@@ -1,5 +1,5 @@
 {% set name = "cesium" %}
-{% set version = "0.10.1" %}
+{% set version = "0.10.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9915a0925cc66ab44f71fbfed72f654c40e13ea4c0b9f658452f90bd800eac3c
+  sha256: c54d302c62c74ab8fa93205543c1e349dc12a13c4e3e2b5dabc120651f4345b8
 
 build:
   number: 0
