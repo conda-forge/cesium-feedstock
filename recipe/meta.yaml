@@ -19,11 +19,11 @@ requirements:
     - {{ compiler('c') }}
   host:
     - pip
-    - python >=3.8
+    - python
     - numpy >=1.14.3
     - cython
   run:
-    - python >=3.8
+    - python
     - {{ pin_compatible('numpy') }}
     - scipy >=0.16.0
     - scikit-learn >=0.22.1
