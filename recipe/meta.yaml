@@ -1,5 +1,5 @@
 {% set name = "cesium" %}
-{% set version = "0.10.1" %}
+{% set version = "0.12.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9915a0925cc66ab44f71fbfed72f654c40e13ea4c0b9f658452f90bd800eac3c
+  sha256: 7b39ddf1adc325a60a57d2ced4c11ed2013245ea5d933a35ab46dbf431f3204b
 
 build:
   number: 0
@@ -19,19 +19,21 @@ requirements:
     - {{ compiler('c') }}
   host:
     - pip
-    - python
+    - python >=3.8
     - numpy >=1.14.3
     - cython
   run:
-    - python
+    - python >=3.8
     - {{ pin_compatible('numpy') }}
     - scipy >=0.16.0
-    - scikit-learn >=0.18.1
+    - scikit-learn >=0.22.1
     - pandas >=0.17.0
-    - dask >=1.0.0
+    - dask >=2.5.0
     - toolz
     - gatspy >=0.3.0
     - cloudpickle
+    - joblib>=0.14.1
+    - setuptools-scm>=7.1.0
 
 test:
   imports:
