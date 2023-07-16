@@ -22,6 +22,7 @@ requirements:
     - python
     - numpy >=1.14.3
     - cython
+    - setuptools-scm
   run:
     - python
     - {{ pin_compatible('numpy') }}
@@ -33,7 +34,6 @@ requirements:
     - gatspy >=0.3.0
     - cloudpickle
     - joblib >=0.14.1
-    - setuptools-scm >=7.1.0
 
 test:
   imports:
